@@ -11,16 +11,13 @@
     <div class="time">
       0:10
     </div>
-    <button type="button" name="button" onclick="test()">
+    <button type="button" name="button" id="button" onclick="test()">
       Start
     </button>
 
     <script type="text/javascript">
 
-      let not_started = true
-
       function changeTime(){
-
         var el = document.getElementsByClassName('time');
 
         let seconds = parseInt(el[0].innerHTML.trim().substring(2,));
@@ -30,17 +27,14 @@
         else {
           el[0].innerHTML = "Congratulations. You have wasted 10 seconds of your life.";
           clearInterval(myInterval);
-          not_started = true;
+          document.getElementById("button").disabled = false;
+          document.getElementById("button").innerHTML = ":(";
         }
       }
 
       function test() {
-
-        if (not_started) {
           myInterval = setInterval(changeTime,1000);
-          not_started = false;
-        }
-
+          document.getElementById("button").disabled = true;
       }
 
     </script>
