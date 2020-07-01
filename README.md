@@ -1,3 +1,3 @@
-# Random Stuff
+# Finance Library
 
-https://websitenotavailable.github.io/randos/
+https://websitenotavailable.github.io/finance/
